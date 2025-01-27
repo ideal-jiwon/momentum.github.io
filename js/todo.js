@@ -25,8 +25,9 @@ function handleToDoSubmit(event){
 function deleteToDo(event){
     //console.log(event.target.parentElement);
     const li = event.target.parentElement;
-    console.log(li.id);
     li.remove();
+    toDos = toDos.filter(toDo => toDo.id !== li.id);
+    saveToDos();
 }
 
 function paintToDo(newTodo){
