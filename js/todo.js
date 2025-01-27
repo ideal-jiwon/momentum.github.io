@@ -40,7 +40,7 @@ function paintToDo(newTodo){
     button.addEventListener("click",deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
-    toDoList.appendChild(li);
+    toDoList.prepend(li);
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
